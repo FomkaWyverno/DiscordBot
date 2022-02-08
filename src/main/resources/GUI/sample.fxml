@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+    <children>
+      <AnchorPane fx:id="ButtonPanel" layoutX="-2.0" layoutY="140.0" prefHeight="580.0" prefWidth="548.0">
+         <children>
+            <JFXToggleButton fx:id="controlBot" focusTraversable="false" layoutX="14.0" text="Включить бота" />
+            <MenuButton fx:id="menuButtonCT" layoutX="166.0" layoutY="16.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="152.0" style="-fx-background-color: gray;" text="Category" textFill="WHITE">
+               <font>
+                  <Font name="MV Boli" size="12.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </MenuButton>
+            <MenuButton fx:id="menuButtonCH" layoutX="166.0" layoutY="71.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="152.0" style="-fx-background-color: gray;" text="Chats" textFill="WHITE">
+               <font>
+                  <Font name="MV Boli" size="13.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </MenuButton>
+            <JFXToggleButton fx:id="ExpButton" layoutX="14.0" layoutY="56.0" text="AddExpVoice" />
+            <JFXButton fx:id="saveButton" defaultButton="true" layoutX="14.0" layoutY="114.0" prefHeight="58.0" prefWidth="140.0" style="-fx-background-color: gray;" text="Save" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="MV Boli" size="23.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+        <AnchorPane fx:id="console" layoutX="543.0" prefHeight="720.0" prefWidth="537.0" style="-fx-background-color: #080808;">
+            <children>
+            <TextArea fx:id="outputConsole" editable="false" focusTraversable="false" layoutY="141.0" prefHeight="562.0" prefWidth="537.0" style="-fx-control-inner-background: #000000; -fx-text-inner-color: #72cf1b;" wrapText="true">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextArea>
+                <TextField fx:id="inputConsole" focusTraversable="false" layoutY="681.0" prefHeight="39.0" prefWidth="537.0" promptText="Write here)" style="-fx-background-color: #171717; -fx-text-inner-color: #ffff;">
+                    <font>
+                        <Font name="Segoe Print" size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+            </children>
+        </AnchorPane>
+      <AnchorPane layoutX="543.0" prefHeight="683.0" prefWidth="537.0" />
+        <AnchorPane fx:id="upPanel" prefHeight="145.0" prefWidth="1080.0" style="-fx-background-color: #f5d3d3; -fx-text-inner-color: red;">
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+                <Text fx:id="nameBot" layoutX="265.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyverno Bot">
+                    <font>
+                        <Font name="Kristen ITC" size="96.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
